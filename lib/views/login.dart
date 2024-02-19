@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import './profile_view.dart';
 
-class PageLogin extends StatelessWidget {
-  const PageLogin({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
