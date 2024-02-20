@@ -52,13 +52,17 @@ class ProfileScreen extends StatelessWidget {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      SizedBox(height: 15),
+                      SizedBox(height: 10),
                       Text("Amin Syah", style: TextStyle(fontSize: 25)),
-                      SizedBox(height: 15),
-                      Text("UI / UX Designer"),
+                      SizedBox(height: 5),
+                      Text(
+                        "UI / UX Designer",
+                        style: TextStyle(fontSize: 16),
+                      ),
                       SizedBox(height: 15),
                       Text(
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                        textAlign: TextAlign.center,
                       ),
                     ],
                   ),
@@ -78,6 +82,62 @@ class ProfileScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 15),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "My Folder",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Container(
+                  width: 75,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Image.asset("assets/icons/add.png"),
+                      Image.asset("assets/icons/settings.png"),
+                      Image.asset("assets/icons/vector.png"),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            height: 300,
+            child: GridView.count(
+              physics: ScrollPhysics(),
+              crossAxisCount: 2,
+              children: [
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.amber,
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.green,
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.purple,
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.blue,
                 ),
               ],
             ),
