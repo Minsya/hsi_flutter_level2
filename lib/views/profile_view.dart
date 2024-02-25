@@ -24,7 +24,7 @@ class ProfileScreen extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.menu),
+            icon: Icon(Icons.more_horiz),
           )
         ],
         centerTitle: true,
@@ -113,36 +113,205 @@ class ProfileScreen extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            height: 300,
-            child: GridView.count(
-              physics: ScrollPhysics(),
-              crossAxisCount: 2,
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                // CardFolder(
+                //   title: "Mobile Apps",
+                //   date: "Des, 2024",
+                //   color: Colors.amber,
+                // ),
                 Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.amber,
+                  padding: EdgeInsets.all(20),
+                  width: 200,
+                  // width: Get.width * 0.4,
+                  height: 125,
+                  decoration: BoxDecoration(
+                    // color: Color(0xFF567DF4),
+                    color: Color.fromRGBO(87, 125, 244, 0.3),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset("assets/icons/folbiru.png"),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        "Mobile Apps",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Text(
+                        "Desember 20, 2023",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.green,
+                  padding: EdgeInsets.all(20),
+                  width: 200,
+                  // width: Get.width * 0.4,
+                  height: 125,
+                  decoration: BoxDecoration(
+                    // color: Color(0xFF567DF4),
+                    color: Color.fromRGBO(244, 239, 87, 0.298),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset("assets/icons/folkuning.png"),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        "SVG Icons",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Text(
+                        "Desember 14, 2023",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // CardFolder(
+                //   title: "Mobile Apps",
+                //   date: "Des, 2024",
+                //   color: Colors.amber,
+                // ),
+                Container(
+                  padding: EdgeInsets.all(20),
+                  width: 200,
+                  // width: Get.width * 0.4,
+                  height: 125,
+                  decoration: BoxDecoration(
+                    // color: Color(0xFF567DF4),
+                    color: Color.fromRGBO(244, 87, 87, 0.298),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset("assets/icons/folmerah.png"),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        "Prototypes",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Text(
+                        "Desember 20, 2023",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.purple,
-                ),
-                Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.blue,
+                  padding: EdgeInsets.all(20),
+                  width: 200,
+                  // width: Get.width * 0.4,
+                  height: 125,
+                  decoration: BoxDecoration(
+                    // color: Color(0xFF567DF4),
+                    color: Color.fromRGBO(87, 244, 111, 0.294),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset("assets/icons/folhijau.png"),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        "Avatars",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Text(
+                        "Desember 14, 2023",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class CardFolder extends StatelessWidget {
+  const CardFolder({
+    super.key,
+    required this.title,
+    required this.date,
+    required this.color,
+  });
+
+  final String title;
+  final String date;
+  final String color;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      // width: Get.width * 0.4,
+      height: 120,
+      decoration: BoxDecoration(
+        color: Color.fromARGB(255, 185, 200, 249),
+        borderRadius: BorderRadius.circular(15),
       ),
     );
   }
