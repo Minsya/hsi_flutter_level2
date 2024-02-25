@@ -36,7 +36,7 @@ class ProfileScreen extends StatelessWidget {
             padding: EdgeInsets.all(20),
             height: 280,
             decoration: BoxDecoration(
-              color: Color.fromARGB(255, 237, 236, 232),
+              color: Color.fromARGB(255, 235, 231, 231),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Stack(
@@ -284,6 +284,32 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Recent Uploads",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+                Image.asset("assets/icons/sort.png", fit: BoxFit.cover),
+              ],
+            ),
+          ),
+          ListTile(
+            leading: Container(
+              width: 50,
+              height: 50,
+              child: Image.asset("assets/icons/word.png", fit: BoxFit.cover),
+            ),
+            title: Text("Projects.docx"),
+            subtitle: Text("November 22,2020"),
+            trailing: Text("300 kb"),
           ),
         ],
       ),
